@@ -1,5 +1,5 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 
 /* Reset */
 
@@ -9,67 +9,62 @@
     box-sizing:border-box;
 }
 
+
 body{
 
     font-family:'Inter',sans-serif;
-
     background:#0B0F19;
-
     color:#F8FAFC;
-
     line-height:1.6;
 
 }
+
 
 /* Navigation */
 
 header{
 
     width:100%;
-
     padding:20px 8%;
 
 }
 
+
 nav{
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
 }
 
+
 nav h1{
 
     color:#3B82F6;
-
     font-size:28px;
 
 }
 
+
 nav ul{
 
     display:flex;
-
     gap:35px;
-
     list-style:none;
 
 }
 
+
 nav a{
 
     color:white;
-
     text-decoration:none;
-
     font-weight:500;
-
     transition:.3s;
 
 }
+
 
 nav a:hover{
 
@@ -77,64 +72,131 @@ nav a:hover{
 
 }
 
+
 /* Hero */
 
 .hero{
 
     text-align:center;
-
     padding:120px 10%;
 
 }
 
+
+.badge{
+
+    display:inline-block;
+    background:rgba(59,130,246,0.15);
+    color:#60A5FA;
+    padding:8px 18px;
+    border-radius:30px;
+    margin-bottom:25px;
+    font-size:14px;
+
+}
+
+
 .hero h2{
 
     font-size:58px;
-
     margin-bottom:25px;
-
     font-weight:800;
 
 }
 
+
+.hero h2 span{
+
+    color:#3B82F6;
+
+}
+
+
 .hero p{
 
     font-size:20px;
-
     color:#CBD5E1;
-
     max-width:700px;
-
     margin:auto;
-
     margin-bottom:40px;
 
 }
 
-.hero button{
+
+/* Search */
+
+.search-box{
+
+    display:flex;
+    justify-content:center;
+    max-width:650px;
+    margin:40px auto;
+
+}
+
+
+.search-box input{
+
+    flex:1;
+    padding:18px;
+    border:none;
+    outline:none;
+    border-radius:12px 0 0 12px;
+    font-size:16px;
+
+}
+
+
+.search-box button{
 
     background:#3B82F6;
-
     color:white;
-
     border:none;
-
-    padding:18px 42px;
-
-    border-radius:12px;
-
+    padding:18px 35px;
+    border-radius:0 12px 12px 0;
     cursor:pointer;
-
-    font-size:18px;
-
+    font-size:16px;
     transition:.3s;
 
 }
 
-.hero button:hover{
+
+.search-box button:hover{
 
     background:#2563EB;
 
+}
+
+
+/* Trust text */
+
+.trust{
+
+    color:#94A3B8;
+    font-size:15px;
+
+}
+
+
+/* Old Button Support */
+
+.hero button{
+
+    background:#3B82F6;
+    color:white;
+    border:none;
+    padding:18px 42px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+
+}
+
+
+.hero button:hover{
+
+    background:#2563EB;
     transform:translateY(-3px);
 
 }
