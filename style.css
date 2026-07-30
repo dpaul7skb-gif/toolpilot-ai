@@ -1,0 +1,140 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#0B0F19;
+
+    color:#F8FAFC;
+
+    line-height:1.6;
+
+}
+
+/* Navigation */
+
+header{
+
+    width:100%;
+
+    padding:20px 8%;
+
+}
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+nav h1{
+
+    color:#3B82F6;
+
+    font-size:28px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#3B82F6;
+
+}
+
+/* Hero */
+
+.hero{
+
+    text-align:center;
+
+    padding:120px 10%;
+
+}
+
+.hero h2{
+
+    font-size:58px;
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:#CBD5E1;
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+}
+
+.hero button{
+
+    background:#3B82F6;
+
+    color:white;
+
+    border:none;
+
+    padding:18px 42px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.hero button:hover{
+
+    background:#2563EB;
+
+    transform:translateY(-3px);
+
+}
