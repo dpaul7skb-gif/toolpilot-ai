@@ -438,3 +438,14 @@
 
     border-radius:12px;
 }
+#searchResults{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    display:grid;
+
+    gap:20px;
+
+}
