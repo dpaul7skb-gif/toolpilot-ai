@@ -6,29 +6,62 @@ const tools = [
     {
         name: "ChatGPT",
         category: "Writing",
-        rating: "4.9 ⭐"
+        rating: "4.9 ⭐",
+        description: "AI assistant for writing, coding and research."
     },
     {
         name: "Claude",
         category: "Writing",
-        rating: "4.8 ⭐"
+        rating: "4.8 ⭐",
+        description: "Advanced AI for long-form writing."
     },
     {
         name: "Gemini",
         category: "Productivity",
-        rating: "4.7 ⭐"
+        rating: "4.7 ⭐",
+        description: "Google AI assistant."
     },
     {
         name: "Perplexity",
         category: "Research",
-        rating: "4.8 ⭐"
+        rating: "4.8 ⭐",
+        description: "AI-powered answer engine."
     },
     {
         name: "Cursor AI",
         category: "Coding",
-        rating: "4.9 ⭐"
+        rating: "4.9 ⭐",
+        description: "AI code editor for developers."
     }
 ];
+
+// ======================
+// Featured Tool Cards
+// ======================
+
+const toolGrid = document.getElementById("toolGrid");
+
+function displayTools() {
+
+    toolGrid.innerHTML = "";
+
+    tools.forEach(tool => {
+
+        toolGrid.innerHTML += `
+            <div class="tool-card">
+                <h3>${tool.name}</h3>
+                <p>${tool.description}</p>
+                <span>${tool.rating}</span>
+                <button>Visit Tool</button>
+            </div>
+        `;
+
+    });
+
+}
+
+displayTools();
+
 // ==========================
 // Search Feature
 // ==========================
@@ -71,11 +104,4 @@ function searchTools() {
 }
 
 searchBtn.addEventListener("click", searchTools);
-
-searchInput.addEventListener("keyup", function(event) {
-
-    if (event.key === "Enter") {
-        searchTools();
-    }
-
-});
+searchInput.addEventListener("input", searchTools);
