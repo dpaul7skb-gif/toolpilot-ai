@@ -449,3 +449,64 @@
     gap:20px;
 
 }
+/* Filter Buttons */
+
+.filter-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:35px 0;
+
+}
+
+.filter-btn{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#1F2937;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.filter-btn:hover{
+
+    background:#3B82F6;
+
+}
+
+.filter-btn.active{
+
+    background:#3B82F6;
+
+}
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        document.querySelector(".filter-btn.active")
+            .classList.remove("active");
+
+        button.classList.add("active");
+
+        displayTools(button.dataset.category);
+
+    });
+
+});

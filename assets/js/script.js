@@ -41,19 +41,30 @@ const tools = [
 
 const toolGrid = document.getElementById("toolGrid");
 
-function displayTools() {
+function displayTools(category = "All") {
 
     toolGrid.innerHTML = "";
 
-    tools.forEach(tool => {
+    const filteredTools = category === "All"
+        ? tools
+        : tools.filter(tool => tool.category === category);
+
+    filteredTools.forEach(tool => {
 
         toolGrid.innerHTML += `
-            <div class="tool-card">
-                <h3>${tool.name}</h3>
-                <p>${tool.description}</p>
-                <span>${tool.rating}</span>
-                <button>Visit Tool</button>
-            </div>
+
+        <div class="tool-card">
+
+            <h3>${tool.name}</h3>
+
+            <p>${tool.description}</p>
+
+            <span>${tool.rating}</span>
+
+            <button>Visit Tool</button>
+
+        </div>
+
         `;
 
     });
@@ -105,3 +116,19 @@ function searchTools() {
 
 searchBtn.addEventListener("click", searchTools);
 searchInput.addEventListener("input", searchTools);
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        document.querySelector(".filter-btn.active")
+            .classList.remove("active");
+
+        button.classList.add("active");
+
+        displayTools(button.dataset.category);
+
+    });
+
+});
